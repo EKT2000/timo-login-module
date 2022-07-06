@@ -1,13 +1,18 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'timo-login-module';
+import { checkCompanyExpiry, multiply } from 'timo-login-module';
 
 export default function App() {
   const [result, setResult] = React.useState<number | undefined>();
 
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    checkCompanyExpiry('timo', 'https://timo24.de/timoadmin/login?f=').then(
+      (r: string) => {
+        console.log(r);
+        multiply(3, 7).then(setResult);
+      }
+    );
   }, []);
 
   return (
