@@ -34,6 +34,7 @@ android {
     minSdkVersion getExtOrIntegerDefault('minSdkVersion')
     targetSdkVersion getExtOrIntegerDefault('targetSdkVersion')
     buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
+    multiDexEnabled true
   }
   buildTypes {
     release {
@@ -125,6 +126,7 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
+  compile 'com.android.support:multidex:2.0.1'
   implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.10'
 // From node_modules
 }
