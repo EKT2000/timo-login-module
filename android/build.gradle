@@ -125,8 +125,8 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
-  implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.10'
-  implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.10'
+  implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
+  implementation 'com.squareup.okhttp3:okhttp:4.10.0'
 // From node_modules
 }
 
