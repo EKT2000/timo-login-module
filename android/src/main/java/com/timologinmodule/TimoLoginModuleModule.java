@@ -41,6 +41,7 @@ public class TimoLoginModuleModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void checkCompanyExpiry(String company, String endpoint, Promise promise) {
+      OkHttpClientProvider.setOkHttpClientFactory(new CorePlaneOkHttpClientFactory());
       OkHttpClient client = new OkHttpClient();
       Request request = new Request.Builder()
         .url(endpoint)
